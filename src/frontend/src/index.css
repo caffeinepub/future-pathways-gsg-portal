@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Navy blue academic palette */
+    --background: 0.975 0.004 245;
+    --foreground: 0.18 0.05 245;
+
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.05 245;
+
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.05 245;
+
+    /* Primary: deep navy */
+    --primary: 0.26 0.075 245;
+    --primary-foreground: 0.99 0 0;
+
+    /* Secondary: slate grey */
+    --secondary: 0.92 0.008 245;
+    --secondary-foreground: 0.26 0.075 245;
+
+    --muted: 0.94 0.006 245;
+    --muted-foreground: 0.52 0.02 245;
+
+    /* Accent: warm gold */
+    --accent: 0.78 0.11 82;
+    --accent-foreground: 0.18 0.05 245;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.99 0 0;
+
+    --border: 0.88 0.01 245;
+    --input: 0.88 0.01 245;
+    --ring: 0.26 0.075 245;
+
+    --radius: 0.5rem;
+
+    --chart-1: 0.26 0.075 245;
+    --chart-2: 0.78 0.11 82;
+    --chart-3: 0.55 0.12 160;
+    --chart-4: 0.62 0.18 30;
+    --chart-5: 0.45 0.09 300;
+
+    --sidebar: 0.26 0.075 245;
+    --sidebar-foreground: 0.92 0.008 245;
+    --sidebar-primary: 0.78 0.11 82;
+    --sidebar-primary-foreground: 0.18 0.05 245;
+    --sidebar-accent: 0.32 0.08 245;
+    --sidebar-accent-foreground: 0.92 0.008 245;
+    --sidebar-border: 0.32 0.08 245;
+    --sidebar-ring: 0.78 0.11 82;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "DM Serif Display", serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "DM Serif Display", serif;
+  }
+  .font-body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-foreground/70 hover:text-primary transition-colors duration-200 px-1 py-0.5;
+  }
+
+  .nav-link-active {
+    @apply text-primary font-semibold border-b-2 border-primary;
+  }
+
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
